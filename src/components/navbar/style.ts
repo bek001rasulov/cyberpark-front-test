@@ -19,6 +19,7 @@ export const NavbarWrapper = styled.header`
 
 export const NavMenu = styled.nav`
     display: flex;
+    align-items: center;
     gap: 12px;
 
     a {

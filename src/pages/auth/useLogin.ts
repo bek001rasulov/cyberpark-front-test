@@ -17,7 +17,7 @@ export const useLogin = () => {
         mutationFn: (data) => postRequest('https://dummyjson.com/auth/login', data),
         onSuccess: async (res) => {
             navigate("/");
-            localStorage.setItem("token", res?.data?.access);
+            localStorage.setItem("token", res?.data?.token);
             notifications.show({
                 title: "Tizimga kirish",
                 message: "Tizimga muvaffaqiyatli kirdingiz",

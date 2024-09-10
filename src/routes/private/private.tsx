@@ -5,9 +5,9 @@ import Layout from "@/layout/page.tsx";
 function PrivateRouter() {
     return (
 
-            // <HocPrivate>
-                <Layout/>
-            // </HocPrivate>
+        <HocPrivate>
+            <Layout/>
+        </HocPrivate>
 
     );
 }

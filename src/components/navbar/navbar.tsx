@@ -2,6 +2,9 @@ import React from 'react';
 import {NavbarWrapper, NavMenu} from './style';
 import {Link, NavLink} from "react-router-dom";
 import IconReact from '@/assets/react.svg';
+import {ActionIcon, Tooltip} from "@mantine/core";
+import {MdExitToApp} from "react-icons/md";
+
 
 const Navbar = () => {
     return (
@@ -15,6 +18,14 @@ const Navbar = () => {
                 <NavLink to="/users">Users</NavLink>
                 <NavLink to="/posts">Posts</NavLink>
                 <NavLink to="/todos">Todos</NavLink>
+                <Tooltip label="Chiqish" style={{fontSize: '12px'}} color={'red'}>
+                    <ActionIcon variant="light" color="#E6483D" ml={9} onClick={() => {
+                        localStorage.clear();
+                        window.location.reload();
+                    }}>
+                        <MdExitToApp/>
+                    </ActionIcon>
+                </Tooltip>
             </NavMenu>
         </NavbarWrapper>
     );
