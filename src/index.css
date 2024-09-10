@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+:root {
+  --text-base-primary: #14151A;
+  --text-base-secondary: rgba(15, 19, 36, 0.60);
+  --background-surface-info-accent: #4778F5;
+  --background-surface-neutral: #F7F7F8;
+  --border-action-normal: #DEE0E3;
+  --background-surface-default: #FFF;
+  --text-base-tertiary: rgba(13, 17, 38, 0.40);
+  --background-badge-green: #D1FAE4;
+  --text-accent-green-inverted: #166E3F;
+  --text-status-warning: #F48E2F;
+  --text-status-success: #26BD6C;
+  --text-status-destructive: #E6483D;
+  --background-badge-red: #FCE5E4;
+  --text-accent-red-inverted: #9A1C13;
+  --background-button-tertiary: rgba(10, 15, 41, 0.04);
+
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  font-family: 'Inter', sans-serif !important;
+}
+
+body {
+  background-color: var(--background-surface-neutral);
+}
+
+svg {
+  flex-shrink: 0;
+}
