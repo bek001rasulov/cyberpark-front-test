@@ -1,0 +1,23 @@
+import React from 'react';
+import {NavbarWrapper, NavMenu} from './style';
+import {Link, NavLink} from "react-router-dom";
+import IconReact from '@/assets/react.svg';
+
+const Navbar = () => {
+    return (
+        <NavbarWrapper>
+            <Link to="/" className="navbar-brand">
+                <img src={IconReact} alt="react-logo"/>
+                <h2>React</h2>
+            </Link>
+            <NavMenu>
+                <NavLink to="/">Products</NavLink>
+                <NavLink to="/users">Users</NavLink>
+                <NavLink to="/posts">Posts</NavLink>
+                <NavLink to="/todos">Todos</NavLink>
+            </NavMenu>
+        </NavbarWrapper>
+    );
+};
+
+export default Navbar;

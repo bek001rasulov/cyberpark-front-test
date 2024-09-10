@@ -1,11 +1,11 @@
 import {Form, Modal, TextContainer, Wrapper} from "./style";
 import {Button} from "@mantine/core";
-import {useForm} from "react-hook-form";
 import {Input} from "@/components/input/input.tsx";
 import {InputPassword} from "@/components/input/input-password.tsx";
+import {useLogin} from "./useLogin.ts";
 
 const Auth = () => {
-    const form = useForm()
+    const {form, onSubmit} = useLogin();
     return (
         <Wrapper>
             <Modal>
@@ -16,7 +16,7 @@ const Auth = () => {
                         foydalaning.
                     </h3>
                 </TextContainer>
-                <Form>
+                <Form onSubmit={form.handleSubmit(onSubmit)}>
                     <Input
                         className="input"
                         control={form.control}
@@ -33,6 +33,7 @@ const Auth = () => {
                         radius={10}
                         fullWidth
                         h={38}
+                        type="submit"
                     >
                         Kirish
                     </Button>
