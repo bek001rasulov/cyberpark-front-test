@@ -1,12 +1,15 @@
 import styled from "@emotion/styled";
 
+
+export const Header = styled.header`
+    background-color: #ffff;
+    box-shadow: 0 0 3px 0 lightgrey;
+    padding: 22px 0;
+`
 export const NavbarWrapper = styled.header`
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 12px 32px;
-    background-color: #ffff;
-    box-shadow: 0 0 3px 0 lightgrey;
 
     .navbar-brand {
         text-decoration: none;

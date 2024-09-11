@@ -1,6 +1,14 @@
 import styled from "@emotion/styled";
 
 export const LayoutWrapper = styled.div`
-    width: 100vw;
-    height: 100vh;  
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    min-height: 100vh;  
+`
+
+export const Main = styled.main`
+    flex: 1 0 auto;
+    position: relative;
+    padding: 32px 0 32px;
 `
