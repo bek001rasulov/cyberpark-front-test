@@ -1,6 +1,6 @@
 import {LayoutWrapper, Main} from "./style.ts";
-import Navbar from "@/components/navbar/navbar.tsx";
 import {Outlet} from "react-router-dom";
+import Navbar from "@/components/navbar/navbar.tsx";
 
 const Layout = () => {
     return (

@@ -1,5 +1,5 @@
 import React from 'react';
-import {Badge, Card, Image, Stack, Text} from "@mantine/core";
+import {Badge, Card, Image, Rating, Stack, Text} from "@mantine/core";
 
 const ProductCard = ({data}: any) => {
     return (
@@ -15,6 +15,7 @@ const ProductCard = ({data}: any) => {
             <Stack justify="space-between" mt="md" mb="xs">
                 <Text fw={500}>{data?.title}</Text>
                 <Badge color="pink">${data?.price}</Badge>
+                <Rating value={data?.rating} fractions={2} readOnly/>
             </Stack>
             <Text size="sm" c="dimmed">
                 {data?.description}

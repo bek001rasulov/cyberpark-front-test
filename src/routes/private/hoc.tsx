@@ -1,6 +1,6 @@
 import { LoadingOverlay } from '@mantine/core';
 import React, {ReactNode} from 'react';
-import {Navigate, useLocation} from 'react-router-dom'
+import {Navigate} from 'react-router-dom'
 
 interface IProps {
     children: ReactNode
