@@ -9,7 +9,7 @@ export default function useHook() {
         queryKey: ['get-users', searchParams.get('page')],
         queryFn: () => {
             const params = `?limit=16&skip=${searchParams.get('page') ? (Number(searchParams.get('page')) - 1) * 16 : 0}`;
-            return getRequest(`https://dummyjson.com/users` + params)
+            return getRequest(`https://dummyjson.com/posts` + params)
         },
         select: (res) => res?.data,
     })

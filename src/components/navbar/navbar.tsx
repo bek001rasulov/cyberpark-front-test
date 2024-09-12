@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import {Header, NavbarWrapper, NavMenu} from './style';
 import {Link, NavLink} from "react-router-dom";
 import IconReact from '@/assets/react.svg';
@@ -7,8 +7,30 @@ import {MdExitToApp} from "react-icons/md";
 
 
 const Navbar = () => {
+    const [position, setPosition] = useState(0);
+    const [visible, setVisible] = useState(true);
+
+
+    const handleScroll = () => {
+        const moving = window.scrollY || window.pageYOffset;
+        setVisible(position > moving);
+        setPosition(moving);
+    };
+
+    useEffect(() => {
+        const isClient = typeof window !== 'undefined';
+
+        if (isClient) {
+            window.addEventListener('scroll', handleScroll);
+
+            return () => {
+                window.removeEventListener('scroll', handleScroll);
+            };
+        }
+    }, [position]);
+
     return (
-        <Header>
+        <Header className={visible ? 'visible' : 'hidden'}>
             <Container size={1504}>
                 <NavbarWrapper>
                     <Link to="/" className="navbar-brand">

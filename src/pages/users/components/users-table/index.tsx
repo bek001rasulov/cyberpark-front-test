@@ -3,11 +3,12 @@ import { TableInner, TableWrapper } from "./style";
 
 export default function UsersTable({ data }: any) {
     return (
-        <TableWrapper>
+        <TableWrapper type="always" scrollbarSize={11}>
             <TableInner>
-                <Table highlightOnHover>
+                <Table stickyHeader highlightOnHover>
                     <Table.Thead>
                         <Table.Tr>
+                            <Table.Th>No</Table.Th>
                             <Table.Th>Name</Table.Th>
                             <Table.Th>Age</Table.Th>
                             <Table.Th>Username</Table.Th>
@@ -18,7 +19,8 @@ export default function UsersTable({ data }: any) {
                     <Table.Tbody>
                         {
                             data?.map((item: any) => (
-                                <Table.Tr>
+                                <Table.Tr key={item.id}>
+                                    <Table.Td>{item?.id}</Table.Td>
                                     <Table.Td>{item?.firstName} {item?.lastName} {item?.maidenName}</Table.Td>
                                     <Table.Td>{item?.age}</Table.Td>
                                     <Table.Td>{item?.username}</Table.Td>

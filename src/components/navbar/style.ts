@@ -2,9 +2,20 @@ import styled from "@emotion/styled";
 
 
 export const Header = styled.header`
+    position: sticky;
+    z-index: 100;
+    transition: 0.5s;
+    width: 100%;
+    top: 0;
     background-color: #ffff;
     box-shadow: 0 0 3px 0 lightgrey;
     padding: 22px 0;
+    &.visible {
+        top: 0;
+    }
+    &.hidden {
+        top: -81px;
+    }
 `
 export const NavbarWrapper = styled.header`
     display: flex;

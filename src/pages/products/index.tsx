@@ -46,7 +46,10 @@ const Products = () => {
 
                     {
                         data?.products?.length === 0 &&
-                        <Box display={'flex'} style={{justifyContent: "center", alignItems: 'center', flexGrow: '1'}}>
+                        <Box
+                            display={'flex'}
+                            style={{justifyContent: "center", alignItems: 'center', flexGrow: '1'}}
+                        >
                             <Text size={'32px'} c={'dimmed'} mt={-145}>Nothing found</Text>
                         </Box>
                     }

@@ -1,6 +1,7 @@
 import styled from "@emotion/styled";
+import {ScrollArea} from "@mantine/core";
 
-export const TableWrapper = styled.div`
+export const TableWrapper = styled(ScrollArea)`
   width: 100%;
   overflow: auto;
   border: 1px solid var(--border-action-normal);
@@ -8,8 +9,6 @@ export const TableWrapper = styled.div`
 `;
 
 export const TableInner = styled.div`
-    overflow: auto;
-
     table {
         background-color: var(--background-surface-default);
 
@@ -34,20 +33,5 @@ export const TableInner = styled.div`
             white-space: nowrap;
         }
     }
-
-    &::-webkit-scrollbar {
-        direction: rtl;
-        width: 0.5em;
-        height: 0.5em;
-    }
-
-    &::-webkit-scrollbar-track {
-        box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.2);
-        border-radius: 1rem;
-    }
-
-    &::-webkit-scrollbar-thumb {
-        background-color: var(--border-action-normal);
-        border-radius: 1rem;
-    }
+    
 `;

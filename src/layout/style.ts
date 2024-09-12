@@ -5,6 +5,7 @@ export const LayoutWrapper = styled.div`
     flex-direction: column;
     position: relative;
     min-height: 100vh;  
+    overflow: hidden;
 `
 
 export const Main = styled.main`
