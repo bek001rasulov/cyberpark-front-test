@@ -23,7 +23,7 @@ const Products = () => {
         <ProductsPage>
             <Container size={1504} className='container'>
                 <ProductsWrapper>
-                    <Flex justify={'space-between'} mb={32}>
+                    <Flex justify={'space-between'} align={'center'} mb={32} gap={20}>
                         <Title size={32}>Products</Title>
                         <Input
                             name="search"
